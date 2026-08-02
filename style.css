@@ -164,57 +164,57 @@ body {
 
 #cover {
 
-    width: 95%;
+    width: 94vw;
 
     max-width: 430px;
 
-    height: 90vh;
-
-    max-height: 760px;
-
-    border-radius: 20px;
+    height: 92vh;
 
     overflow: hidden;
 
-    box-shadow: 0 20px 60px rgba(0, 0, 0, .5);
-
-    cursor: pointer;
+    border-radius: 22px;
 
 }
 
-#cover {
+#cover img {
 
-    width: 92vw;
+    width: 100%;
 
-    max-width: 380px;
+    height: 100%;
 
-    height: 88vh;
+    object-fit: cover;
+
+    object-position: center;
 
 }
 
 /* ===============================
-   INSIDE
+   INSIDE CARD
 ================================= */
 
 #inside {
 
     display: none;
 
-    width: 95%;
+    position: relative;
+
+    width: 94vw;
+
     max-width: 430px;
 
-    height: 90vh;
+    height: 92vh;
 
     max-height: 760px;
 
     background: url("assets/backgrounds/inside-paper.png");
+
     background-size: cover;
 
-    border-radius: 20px;
-
-    padding: 18px;
+    border-radius: 22px;
 
     overflow: hidden;
+
+    box-shadow: 0 20px 60px rgba(0, 0, 0, .45);
 
 }
 
@@ -224,9 +224,13 @@ body {
 
 #photo {
 
-    width: 100%;
+    width: 92%;
 
-    height: 36%;
+    height: 235px;
+
+    margin: 16px auto 0;
+
+    display: block;
 
     object-fit: cover;
 
@@ -240,11 +244,17 @@ body {
 
 #textArea {
 
-    display: flex;
+    position: absolute;
 
-    flex-direction: column;
+    top: 265px;
 
-    height: calc(100% - 36%);
+    left: 18px;
+
+    right: 18px;
+
+    bottom: 72px;
+
+    overflow-y: auto;
 
 }
 
@@ -256,25 +266,23 @@ body {
 
     color: #d84f8c;
 
-    font-size: 2.2rem;
+    font-size: 2.1rem;
+
+    margin-bottom: 15px;
 
 }
 
 #message {
 
-    flex: 1;
-
-    overflow-y: auto;
-
     white-space: pre-line;
 
-    line-height: 1.75;
+    line-height: 1.8;
 
     font-size: 18px;
 
     color: #444;
 
-    padding-right: 5px;
+    padding-bottom: 40px;
 
 }
 
@@ -284,13 +292,17 @@ body {
 
 .buttons {
 
+    position: absolute;
+
+    left: 18px;
+
+    right: 18px;
+
+    bottom: 18px;
+
     display: flex;
 
     justify-content: space-between;
-
-    margin-top: 12px;
-
-    flex-shrink: 0;
 
 }
 
@@ -298,19 +310,19 @@ body {
 
     border: none;
 
-    cursor: pointer;
-
     background: #ff5ea8;
 
     color: white;
 
     padding: 12px 22px;
 
-    border-radius: 40px;
+    border-radius: 30px;
+
+    font-size: 16px;
 
     font-weight: 600;
 
-    transition: .3s;
+    cursor: pointer;
 
 }
 
@@ -351,7 +363,6 @@ body {
 ================================= */
 @media(max-width:600px) {
 
-    #cover,
     #inside {
 
         width: 94vw;
@@ -362,13 +373,13 @@ body {
 
     #photo {
 
-        height: 220px;
+        height: 210px;
 
     }
 
     #title {
 
-        font-size: 2rem;
+        font-size: 1.9rem;
 
     }
 
@@ -376,7 +387,15 @@ body {
 
         font-size: 17px;
 
-        line-height: 1.7;
+        line-height: 1.65;
+
+    }
+
+    .buttons button {
+
+        padding: 10px 18px;
+
+        font-size: 15px;
 
     }
 
@@ -498,14 +517,23 @@ body {
 
 #pageNumber {
 
+    position: absolute;
+
+    bottom: 82px;
+
+    left: 0;
+
+    right: 0;
+
     text-align: center;
 
-    margin-top: 15px;
+    color: #c04c87;
+
+    font-size: 20px;
 
     font-weight: bold;
 
-    color: #b54b82;
-
+}
 }
 
 /* ==========================================
